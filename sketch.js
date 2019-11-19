@@ -23,7 +23,9 @@ function draw() {
   //touches coins
   for (var i = 0; i < touches.length; i++) {
     image(coin, touches[i].x, touches[i].y, 90, 90);
-    soundDrop.play();
+    if (touches[i].y < height / 4) {
+      soundDrop.play();
+    }
   }
 
   //text insert coin
